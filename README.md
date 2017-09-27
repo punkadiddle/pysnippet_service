@@ -20,7 +20,7 @@ source .venv/bin/activate
 ### Requirements
 
 Paketquellen aus requirements.txt installieren
-```python 
+```
 pip install --upgrade pip setuptools
 pip install -r requirements.txt
 ```
@@ -28,24 +28,24 @@ pip install -r requirements.txt
 ### Lokale Installation des Projekt-Pakets
 
 Paket mit Abhängigkeiten für Tests im aktuellen Verzeichnis bereitstellen:
-```python
+```shell
 pip install -e ".[testing]"
 ```
 
 ### Ausführen der Tests
 
-```python
+```shell
 python setup.py test
 ```
 
 Hilfe, was setup.py noch alles kann:
-```python
+```shell
 python setup.py --help-commands
 ```
 
 ### Ausführen des Services
 
-```python
+```shell
 gunicorn --paste development.ini
 ```
 
@@ -54,12 +54,12 @@ gunicorn --paste development.ini
 ### Requirements
 
 Die aktuellen Paketversionen im Virtual Environment als requirements.txt ablegen:
-```python
+```shell
 pip freeze > requirements.txt
 ```
 
 Paketkonfiguration prüfen und bauen
-```python
+```shell
 python setup.py check
 python setup.py build
 ```
